@@ -23,9 +23,9 @@ const resetForm = () => {
     document.querySelector('input[name="gender"]:checked').checked = false;
     document.getElementById("age").value = "";
     document.getElementById("condition").value = "";
-  }
+}
 
-  // GENERATE A REPORT
+    // GENERATE A REPORT
 
 const generateReport = () => {
     const numPatients = patients.length;

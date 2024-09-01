@@ -1,6 +1,17 @@
 body{
     text-align: center;
 }
+
+nav ul {
+    list-style-type: none;
+    /* padding: 0; */
+  }
+  
+  nav ul li {
+    display: inline;
+    margin-right: 10px;
+  }
+
 /* Some basic styling for demonstration purposes */
 #contactForm {
   max-width: 400px;
