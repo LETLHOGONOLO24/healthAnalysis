@@ -14,11 +14,11 @@ const addPatient = () => {
       resetForm();
       generateReport();
     }
-  }
+}
 
   // RESET FORM VALUES
 
-  const resetForm = () => {
+const resetForm = () => {
     document.getElementById("name").value = "";
     document.querySelector('input[name="gender"]:checked').checked = false;
     document.getElementById("age").value = "";
@@ -27,7 +27,7 @@ const addPatient = () => {
 
   // GENERATE A REPORT
 
-  const generateReport = () => {
+const generateReport = () => {
     const numPatients = patients.length;
     const conditionsCount = {
       Diabetes: 0,
@@ -65,7 +65,7 @@ const addPatient = () => {
         report.innerHTML += `&nbsp;&nbsp;${condition}: ${genderConditionsCount[gender][condition]}<br>`;
       }
     }
-  }
+}
 
 addPatientButton.addEventListener("click", addPatient);
 
@@ -95,10 +95,11 @@ const searchCondition= () => {
         } else {
           resultDiv.innerHTML = 'Condition not found.';
         }
-      })
-      .catch(error => {
+    })
+    .catch(error => {
         console.error('Error:', error);
         resultDiv.innerHTML = 'An error occurred while fetching data.';
-      });
-  }
-    btnSearch.addEventListener('click', searchCondition);
+    });
+}
+
+btnSearch.addEventListener('click', searchCondition);
